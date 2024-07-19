@@ -18,8 +18,7 @@ ColorPair.prototype.toString=function(){
 function getPairNumberFromColor(pair) {
 	majorIndex(pair)
 	minorIndex(pair)
-        if (majorIndex == -1 || minorIndex == -1)
-            {
+        if (majorIndex == -1 || minorIndex == -1) {
                 throw `Unknown Colors:${pair.toString()}`;
             }
 
@@ -28,10 +27,8 @@ function getPairNumberFromColor(pair) {
 
 	function majorIndex(pair) {
 		let majorIndex = -1;
-	        for (let i = 0; i < MajorColorNames.length; i++)
-            {
-                if (MajorColorNames[i] == pair.majorColor)
-                {
+	        for (let i = 0; i < MajorColorNames.length; i++) {
+                if (MajorColorNames[i] == pair.majorColor) {
                     majorIndex = i;
                     break;
                 }
@@ -41,8 +38,7 @@ function getPairNumberFromColor(pair) {
 
 	function minorIndex(pair) {
      	let minorIndex = -1;
-            for (let i = 0; i < MinorColorNames.length; i++)
-            {
+            for (let i = 0; i < MinorColorNames.length; i++) {
                 if (MinorColorNames[i] == pair.minorColor)
                 {
                     minorIndex = i;
