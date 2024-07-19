@@ -27,13 +27,7 @@ function getPairNumberFromColor(pair) {
 
 	function majorIndex(pair) {
 		let majorIndex = -1;
-	        for (let i = 0; i < MajorColorNames.length; i++) {
-                if (MajorColorNames[i] == pair.majorColor) {
-                    majorIndex = i;
-                    break;
-                }
-            }
-	return majorIndex;
+	return MajorColorNames.indexOf(pair.majorColor);
 	}
 
 	function minorIndex(pair) {
