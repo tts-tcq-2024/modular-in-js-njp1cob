@@ -32,3 +32,4 @@ const { getColorFromPairNumber, getPairNumberFromColor } = require('./colorUtils
             console.log(`[In]Colors: ${testPair2}, [Out] PairNumber: ${pairNumber}`);
 			console.assert(pairNumber==6);
 }
+testforPairs();
