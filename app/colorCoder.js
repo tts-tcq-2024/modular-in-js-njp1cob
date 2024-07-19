@@ -24,6 +24,8 @@ function getColorFromPairNumber(pairNumber)
  	{
  		throw `Argument PairNumber:${pairNumber} is outside the allowed range` 
 	}
+
+	//get index of arrays
 	let zeroBasedPairNumber = pairNumber - 1;
     let majorIndex = parseInt (zeroBasedPairNumber / minorSize);
     let minorIndex = parseInt(zeroBasedPairNumber % minorSize);
@@ -63,7 +65,7 @@ function getPairNumberFromColor(pair)
         return (majorIndex * MinorColorNames.length) + (minorIndex + 1);
 	 }
 	 
-	 function test(){
+	 function testforPairs(){
 			pairNumber = 4;
             let testPair1 = getColorFromPairNumber(pairNumber);
             console.log(`[In]Pair Number: ${pairNumber},[Out] Colors:${testPair1}`);
