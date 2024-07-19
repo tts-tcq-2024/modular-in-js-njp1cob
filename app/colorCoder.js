@@ -27,19 +27,14 @@ function getPairNumberFromColor(pair) {
 
 	function majorIndex(pair) {
 		let majorIndex = -1;
-	return MajorColorNames.indexOf(pair.majorColor);
+	return majorIndex = MajorColorNames.indexOf(pair.majorColor);
 	}
 
 	function minorIndex(pair) {
      	let minorIndex = -1;
-            for (let i = 0; i < MinorColorNames.length; i++) {
-                if (MinorColorNames[i] == pair.minorColor)
-                {
-                    minorIndex = i;
-                    break;
-                }
-            }
-	return minorIndex;
+	return minorIndex = MinorColorNames.indexOf(pair.minorColor);
+	}
+
 test();
 module.exports = {
     getColorFromPairNumber,
