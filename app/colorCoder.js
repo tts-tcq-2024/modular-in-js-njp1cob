@@ -37,8 +37,20 @@ function getColorFromPairNumber(pairNumber)
 
 function getPairNumberFromColor(pair)
         {
-        let majorIndex = -1;
-        for (let i = 0; i < MajorColorNames.length; i++)
+        
+	majorIndex(pair)
+	minorIndex(pair)
+        if (majorIndex == -1 || minorIndex == -1)
+            {
+                throw `Unknown Colors:${pair.toString()}`;
+            }
+
+        return (majorIndex * MinorColorNames.length) + (minorIndex + 1);
+	 }
+
+	function majorIndex(pair) {
+		let majorIndex = -1;
+	        for (let i = 0; i < MajorColorNames.length; i++)
             {
                 if (MajorColorNames[i] == pair.majorColor)
                 {
@@ -46,8 +58,11 @@ function getPairNumberFromColor(pair)
                     break;
                 }
             }
+	return majorIndex;
+	}
 
-        let minorIndex = -1;
+	function minorIndex(pair) {
+     	let minorIndex = -1;
             for (let i = 0; i < MinorColorNames.length; i++)
             {
                 if (MinorColorNames[i] == pair.minorColor)
@@ -56,14 +71,9 @@ function getPairNumberFromColor(pair)
                     break;
                 }
             }
-    
-        if (majorIndex == -1 || minorIndex == -1)
-            {
-                throw `Unknown Colors:${pair.toString()}`;
-            }
-
-        return (majorIndex * MinorColorNames.length) + (minorIndex + 1);
-	 }
+	return minorIndex;
+	}
+	
 	 
 	 function testforPairs(){
 			pairNumber = 4;
