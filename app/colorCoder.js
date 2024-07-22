@@ -37,7 +37,7 @@ function getPairNumberFromColor(pair) {
 
 
 module.exports = {
-    getColorFromPairNumber,
+   
     getPairNumberFromColor
 };
 
